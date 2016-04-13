@@ -176,7 +176,7 @@
 				<configuration>
 					<path>/</path>
 					<port>80</port>
-					<httpsPort>443</httpsPort>
+					<!-- <httpsPort>443</httpsPort> -->
 				</configuration>
 			</plugin>
 			<plugin>

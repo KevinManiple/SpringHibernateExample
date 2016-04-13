@@ -6,14 +6,14 @@ import com.websystique.springmvc.model.Employee;
 
 public interface EmployeeDao {
 
-	Employee findById(int id);
+    Employee findById(int id);
 
-	void saveEmployee(Employee employee);
-	
-	void deleteEmployeeBySsn(String ssn);
-	
-	List<Employee> findAllEmployees();
+    void saveEmployee(Employee employee);
 
-	Employee findEmployeeBySsn(String ssn);
+    void deleteEmployeeBySsn(String ssn);
+
+    List<Employee> findAllEmployees();
+
+    Employee findEmployeeBySsn(String ssn);
 
 }
