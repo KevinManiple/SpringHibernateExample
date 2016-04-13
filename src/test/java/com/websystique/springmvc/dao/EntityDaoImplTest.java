@@ -13,20 +13,18 @@ import org.testng.annotations.BeforeMethod;
 
 import com.websystique.springmvc.configuration.HibernateTestConfiguration;
 
-
 @ContextConfiguration(classes = { HibernateTestConfiguration.class })
 public abstract class EntityDaoImplTest extends AbstractTransactionalTestNGSpringContextTests {
 
-	@Autowired
-	DataSource dataSource;
+    @Autowired
+    DataSource dataSource;
 
-	@BeforeMethod
-	public void setUp() throws Exception {
-		IDatabaseConnection dbConn = new DatabaseDataSourceConnection(
-				dataSource);
-		DatabaseOperation.CLEAN_INSERT.execute(dbConn, getDataSet());
-	}
-	
-	protected abstract IDataSet getDataSet() throws Exception;
+    @BeforeMethod
+    public void setUp() throws Exception {
+        IDatabaseConnection dbConn = new DatabaseDataSourceConnection(dataSource);
+        DatabaseOperation.CLEAN_INSERT.execute(dbConn, getDataSet());
+    }
+
+    protected abstract IDataSet getDataSet() throws Exception;
 
 }
